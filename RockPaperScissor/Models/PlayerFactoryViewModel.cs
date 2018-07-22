@@ -19,10 +19,10 @@ namespace RockPaperScissor.Models
                 file = File.Create(path);
                 writer.Serialize(file, pv);            
             }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.Message);
-            }
+            //catch (Exception ex)
+            //{
+            //    Debug.WriteLine(ex.Message);
+            //}
             finally {
                 file.Close();
             }
