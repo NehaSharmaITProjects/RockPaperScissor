@@ -2,6 +2,7 @@
 using System.Xml.Serialization;
 using System.IO;
 using System.Diagnostics;
+using System.Web;
 
 namespace RockPaperScissor.Models
 {
@@ -9,7 +10,7 @@ namespace RockPaperScissor.Models
     {
         public static void SaveData(PlayerViewModel pv)
         {
-            var path = AppDomain.CurrentDomain.BaseDirectory + "App_Data\\" + "PlayerData\\" + "playerdetails.txt";
+            var path = HttpContext.Current.Server.MapPath("~/App_Data/PlayerData/playerdetails.txt");
             XmlSerializer writer = new XmlSerializer(typeof(PlayerViewModel));
 
             FileStream file = null;
