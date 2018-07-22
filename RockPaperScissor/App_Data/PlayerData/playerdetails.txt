@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <PlayerViewModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Name>fdf</Name>
-  <Email>sun@kj.com</Email>
+  <Name>dffffsd</Name>
+  <Email>su44b@gmail.com</Email>
   <Mobile>07506255567</Mobile>
 </PlayerViewModel>

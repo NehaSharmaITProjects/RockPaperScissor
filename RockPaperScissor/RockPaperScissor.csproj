@@ -244,6 +244,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\PlayRockPaperScissors\Index.cshtml" />
+    <Content Include="Views\PlayRockPaperScissors\ReadData.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

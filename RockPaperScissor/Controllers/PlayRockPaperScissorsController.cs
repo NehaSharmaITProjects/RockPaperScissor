@@ -93,5 +93,12 @@ namespace RockPaperScissor.Controllers
             PlayerFactoryViewModel.SaveData(pv);
             return RedirectToAction("Index");
         }
+
+        public ActionResult ReadData()
+        {
+
+            var model = PlayerFactoryViewModel.ReadData();
+            return View(model);
+        }
     }
 }

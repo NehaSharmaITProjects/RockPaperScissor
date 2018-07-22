@@ -19,13 +19,36 @@ namespace RockPaperScissor.Models
                 file = File.Create(path);
                 writer.Serialize(file, pv);            
             }
-            //catch (Exception ex)
-            //{
-            //    Debug.WriteLine(ex.Message);
-            //}
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
             finally {
                 file.Close();
             }
+        }
+
+        public static PlayerViewModel ReadData()
+        {
+            PlayerViewModel rtnValue = null;
+            var path = HttpContext.Current.Server.MapPath("~/App_Data/PlayerData/playerdetails.txt");
+            XmlSerializer writer = new XmlSerializer(typeof(PlayerViewModel));
+
+            FileStream file = null;
+            try
+            {
+                file = File.OpenRead(path);
+                rtnValue = (PlayerViewModel)writer.Deserialize(file);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+            finally
+            {
+                file.Close();
+            }
+            return rtnValue;
         }
     }
 }
